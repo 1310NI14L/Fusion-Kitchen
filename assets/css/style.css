@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    padding: 1àpx;
+    justify-items: center;
+    align-items: center;
+
+    .content-logo {
+        margin: 0;
+        width: 40vh;
+
+        img{
+            height: 13.5vh;
+            width: 40vh;
+        }
+    }
+
+    .nav-links {
+        display: flex;
+        padding-left: 60px;
+        margin: 0px auto;
+
+        li {
+            list-style-type: none;
+            margin: 8px;
+            padding: 15px;
+            
+            a {
+                text-decoration: none;
+                color: #000;
+                font-weight: 750;
+                font-size: 25px;
+                padding: 5px;
+            }
+
+            a:hover{
+                background-color: rgba(145, 255, 0, 0.884);
+                padding: 0.2vh 2vh 1vh;
+                padding-top: 10vh;
+            }
+        }
+    }
+
+    .menu {
+        margin-left: 7em;
+        padding: 0;
+
+        img{
+            width: 15vh;
+        }
+    }
+}
+
+main {
+    margin: 10px auto;
+    padding: 40px;
+    display: flex;
+
+    .left {
+        height: 30vh;
+        padding: 15px;
+
+        .text {
+            height: 10vh;
+
+
+            h2 {
+                font-size: 7.4vh;
+                width: 90vh;
+            }
+        }
+
+        .btn {
+            height: 15vh;
+            padding-top: 90px;
+
+            a {
+                padding: 20px;
+                background-color: rgba(145, 255, 0, 0.884);
+                border-radius: 50px;
+                height: 15vh;
+                color: #000;
+                text-decoration: none;
+                font-size: 18px;
+                font-weight: 750;
+            }
+        }
+    }
+
+    .right {
+
+        .pic1 img {
+            height: 70vh;
+            width: 80vh;
+            margin-top: -7.5vh;
+            margin-left: 5vh;
+        }
+
+        .pic2 {
+            margin-left: -15vh;
+            margin-top: -35vh;
+
+            img {
+                height: 32.5vh;
+                width: 50vh;
+
+            }
+        }
+    }
+}
