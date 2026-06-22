@@ -11,110 +11,270 @@ body {
 
 header {
     display: flex;
-    padding: 1àpx;
-    justify-items: center;
+    padding: 10px;
     align-items: center;
+    position: relative;
+}
 
-    .content-logo {
-        margin: 0;
-        width: 40vh;
+header .content-logo {
+    margin: 0;
+    width: 40vh;
+}
 
-        img{
-            height: 13.5vh;
-            width: 40vh;
-        }
-    }
+header .content-logo img {
+    height: 13.5vh;
+    width: 40vh;
+}
 
-    .nav-links {
-        display: flex;
-        padding-left: 60px;
-        margin: 0px auto;
+header .nav-links {
+    display: flex;
+    padding-left: 60px;
+    margin: 0 auto;
+    gap: 0;
+}
 
-        li {
-            list-style-type: none;
-            margin: 8px;
-            padding: 15px;
-            
-            a {
-                text-decoration: none;
-                color: #000;
-                font-weight: 750;
-                font-size: 25px;
-                padding: 5px;
-            }
+header .menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    margin-left: auto;
+}
 
-            a:hover{
-                background-color: rgba(145, 255, 0, 0.884);
-                padding: 0.2vh 2vh 1vh;
-                padding-top: 10vh;
-            }
-        }
-    }
+header .menu-toggle img {
+    width: 2.5rem;
+    height: auto;
+}
 
-    .menu {
-        margin-left: 7em;
-        padding: 0;
+header .nav-links li {
+    list-style-type: none;
+    margin: 8px;
+    padding: 15px;
+}
 
-        img{
-            width: 15vh;
-        }
-    }
+header .nav-links li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 750;
+    font-size: 25px;
+    padding: 5px;
+}
+
+header .nav-links li a:hover {
+    background-color: rgba(145, 255, 0, 0.884);
+    padding: 0.2vh 2vh 1vh;
+    padding-top: 10vh;
 }
 
 main {
     margin: 10px auto;
     padding: 40px;
     display: flex;
+}
 
-    .left {
-        height: 30vh;
+main .left {
+    height: 30vh;
+    padding: 15px;
+}
+
+main .left .text {
+    height: 10vh;
+}
+
+main .left .text h2 {
+    font-size: 7.4vh;
+    width: 90vh;
+}
+
+main .left .btn {
+    height: 15vh;
+    padding-top: 90px;
+}
+
+main .left .btn a {
+    padding: 20px;
+    background-color: rgba(145, 255, 0, 0.884);
+    border-radius: 50px;
+    height: 15vh;
+    color: #000;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 750;
+}
+
+main .right .pic1 img {
+    height: 70vh;
+    width: 80vh;
+    margin-top: -7.5vh;
+    margin-left: 5vh;
+}
+
+main .right .pic2 {
+    margin-left: -15vh;
+    margin-top: -35vh;
+}
+
+main .right .pic2 img {
+    height: 32.5vh;
+    width: 50vh;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    body {
         padding: 15px;
-
-        .text {
-            height: 10vh;
-
-
-            h2 {
-                font-size: 7.4vh;
-                width: 90vh;
-            }
-        }
-
-        .btn {
-            height: 15vh;
-            padding-top: 90px;
-
-            a {
-                padding: 20px;
-                background-color: rgba(145, 255, 0, 0.884);
-                border-radius: 50px;
-                height: 15vh;
-                color: #000;
-                text-decoration: none;
-                font-size: 18px;
-                font-weight: 750;
-            }
-        }
     }
 
-    .right {
+    header {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
 
-        .pic1 img {
-            height: 70vh;
-            width: 80vh;
-            margin-top: -7.5vh;
-            margin-left: 5vh;
-        }
+    header .content-logo {
+        width: auto;
+    }
 
-        .pic2 {
-            margin-left: -15vh;
-            margin-top: -35vh;
+    header .content-logo img {
+        width: 120px;
+        height: auto;
+    }
 
-            img {
-                height: 32.5vh;
-                width: 50vh;
+    header .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-left: 0;
+        margin: 10px 0 0;
+    }
 
-            }
-        }
+    header .nav-links li {
+        margin: 6px;
+        padding: 10px;
+    }
+
+    header .nav-links li a {
+        font-size: 20px;
+    }
+
+    header .menu-toggle {
+        display: none;
+    }
+
+    main {
+        padding: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .left {
+        width: 100%;
+        height: auto;
+        padding: 10px;
+    }
+
+    main .left .text h2 {
+        font-size: 5.5vh;
+        width: 100%;
+    }
+
+    main .left .btn {
+        padding-top: 20px;
+    }
+
+    main .left .btn a {
+        font-size: 16px;
+    }
+
+    main .right .pic1 img,
+    main .right .pic2 img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    main .right {
+        width: 100%;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main .right .pic2 {
+        margin-left: 0;
+        margin-top: 0;
+        width: 90%;
+    }
+
+    header .nav-links li a:hover {
+        background-color: rgba(145, 255, 0, 0.884);
+        padding: 0.2vh 1.5vh 0.5vh;
+        padding-top: 3vh;
+    }
+
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        justify-content: space-between;
+    }
+
+    header .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        background: rgba(165, 161, 161, 0.9);
+        box-shadow: 0 20px 60px rgba(255, 255, 255, 0.35);
+        padding: 20px 0;
+        z-index: 10;
+    }
+
+    header.nav-open .nav-links {
+        display: flex;
+    }
+
+    header .nav-links li {
+        width: 100%;
+        margin: 0;
+        padding: 12px 0;
+    }
+
+    header .nav-links li a {
+        font-size: 18px;
+        padding: 12px 20px;
+        width: 100%;
+        display: inline-block;
+        color: #fff;
+    }
+
+    header .nav-links li a:hover {
+        background-color: rgba(215, 238, 185, 0.9);
+        color: #000;
+    }
+
+    header .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    main .left .text h2 {
+        font-size: 4.5vh;
+    }
+
+    main .left .btn a {
+        padding: 14px 18px;
     }
 }
